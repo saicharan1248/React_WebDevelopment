@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa; /* Light background color */
+  border-bottom: 1px solid #dee2e6; /* Bottom border for separation */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Dark text color */
+}
+
+.search-bar {
+  width: 300px; /* Width of the search bar */
+  padding: 8px; /* Padding inside the search bar */
+  border: 1px solid #ced4da; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.notifications {
+  margin-right: 15px; /* Space between notifications and profile icon */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.profile-icon {
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 24px; /* Size of the profile icon */
+}

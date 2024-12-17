@@ -1,0 +1,56 @@
+.streamer-profile {
+  padding: 20px;
+  background-color: #ffffff; /* White background for the profile */
+  border: 1px solid #dee2e6; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: relative; /* Positioning context for absolute elements */
+}
+
+.banner {
+  position: relative;
+  height: 200px; /* Fixed height for the banner */
+  overflow: hidden; /* Hide overflow */
+}
+
+.banner img {
+  width: 100%; /* Full width for the banner image */
+  height: 100%; /* Full height for the banner image */
+  object-fit: cover; /* Cover the area without distortion */
+}
+
+.profile-pic {
+  border-radius: 50%; /* Circular profile picture */
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  position: absolute; /* Positioning relative to the banner */
+  bottom: -50px; /* Overlap the banner */
+  left: 20px; /* Space from the left */
+  border: 4px solid white; /* White border around the profile picture */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.follow-button {
+  margin-top: 60px; /* Space above the button */
+  padding: 10px 20px; /* Padding for the button */
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.2s; /* Smooth background color transition */
+}
+
+.follow-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.info-section {
+  margin-top: 60px; /* Space below the profile picture */
+  font-size: 16px; /* Font size for the info section */
+  color: #333; /* Dark text color */
+}
+
+.info-section p {
+  margin: 5px 0; /* Space between paragraphs */
+}

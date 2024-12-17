@@ -1,0 +1,44 @@
+.navigation-menu {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  padding: 10px; /* Padding around the menu */
+  background-color: #ffffff; /* White background */
+  border-right: 1px solid #dee2e6; /* Right border for separation */
+  width: 200px; /* Fixed width for the navigation menu */
+}
+
+.navigation-menu ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+
+.navigation-menu li {
+  padding: 10px 0; /* Vertical padding for each menu item */
+  cursor: pointer; /* Pointer cursor on hover */
+  color: #333; /* Dark text color */
+  transition: background-color 0.2s; /* Smooth background color transition */
+}
+
+.navigation-menu li:hover {
+  background-color: #f1f1f1; /* Light gray background on hover */
+}
+
+.user-menu {
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+  margin-top: 10px; /* Space above user menu */
+}
+
+.user-menu button {
+  padding: 8px 12px; /* Padding for buttons */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.2s; /* Smooth background color transition */
+}
+
+.user-menu button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}

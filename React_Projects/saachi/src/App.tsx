@@ -1,6 +1,5 @@
-import { useState } from "react";
 import "./App.css";
-import HeaderNavBar from "./HeaderNavBar.jsx";
+import HeaderNavBar from "./components/Header_Bar/HeaderNavBar";
 
 function App() {
   return (
@@ -12,8 +11,8 @@ function App() {
         <HeaderNavBar />
       </header>
       <main>
-        <div class="container">
-          <section class="featured-products"></section>
+        <div className="container">
+          <section className="featured-products"></section>
         </div>
       </main>
       <footer></footer>

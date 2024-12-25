@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import HomePage from "./components/HomePage.jsx";
-import ImageUpload from "./components/ImageUpload.jsx";
-import Cart from "./components/Cart.jsx";
-import LogOut from "./components/user_login/LogOut.jsx";
+import HomePage from "../user_login/HomePage";
+import ImageUpload from "../user_login/ImageUpload";
+import Cart from "../user_login/Cart";
+import LogOut from "../user_login/LogOut";
 
 export default function HeaderNavBar() {
-  let headerbuttonclasses =
+  const headerbuttonclasses: string =
     "flex-row m-2 gap-4 px-4 py-2 font-semibold uppercase rounded text-slate-900 bg-amber-400 hover:bg-amber-500";
   return (
     <Router>

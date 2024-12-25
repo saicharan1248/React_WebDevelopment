@@ -1,16 +1,18 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function ImageUpload() {
-  const [imageSrcs, setImageSrcs] = useState([]);
+  const [imageSrcs, setImageSrcs] = useState<string[]>([]); // State to hold image sources
 
-  function handleImageUpload(event) {
+  function handleImageUpload(event: React.ChangeEvent<HTMLInputElement>) {
     const files = event.target.files;
+    if (!files) return; // Check if files are available
+
     const fileArray = Array.from(files);
     const imagePromises = fileArray.map((file) => {
-      return new Promise((resolve, reject) => {
+      return new Promise<string>((resolve, reject) => {
         const reader = new FileReader();
         reader.onloadend = () => {
-          resolve(reader.result);
+          resolve(reader.result as string); // Ensure the result is a string
         };
         reader.onerror = reject;
         reader.readAsDataURL(file);
@@ -19,34 +21,21 @@ export default function ImageUpload() {
 
     Promise.all(imagePromises)
       .then((images) => {
-        setImageSrcs(images);
+        setImageSrcs(images); // Set the state with the loaded images
       })
       .catch((error) => {
         console.error("Error reading files:", error);
       });
   }
 
-  function handleCancel() {
-    setImageSrcs([]);
-  }
-
   return (
     <div>
-      <h1>Image Upload</h1>
-      <input
-        type="file"
-        accept="image/*"
-        multiple
-        onChange={handleImageUpload}
-      />
+      <input type="file" multiple onChange={handleImageUpload} />
       <div>
         {imageSrcs.map((src, index) => (
           <img key={index} src={src} alt={`Uploaded ${index}`} />
         ))}
       </div>
-      <button className="bg-red-800" onClick={handleCancel}>
-        Cancel
-      </button>
     </div>
   );
 }
